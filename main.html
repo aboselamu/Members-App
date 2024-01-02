@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicant Registration Form</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        
+        font-size: 25px;
+        font-weight: 800;
+        color: #000d86;
+        margin: 10px;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #ffffff;
+        position: relative;
+      }
+
+      .back-button {
+        position: absolute;
+        
+        top: 18px;
+        left: 18px;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        background-color: #fcfcfc;
+        color: rgb(4, 41, 250);
+        border: none;
+        border-radius: 5px;
+      }
+
+      .back-button:hover {
+        background-color: #c6dfc7;
+      }
+
+      .title {
+        font-size: 44px;
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .form-row {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        margin-bottom: 15px; /* Added margin between rows */
+      }
+
+      .input-box {
+        flex: 1;
+        text-align: left;
+      }
+
+      .input-box input {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-top: 5px;
+        
+      }
+
+      form .input-box span.details{
+      display: block;
+      font-size: 25px;
+      font-weight: 800;
+      color: #000d86;
+      margin-bottom: 5px;
+      }
+      .gender-details, .file-type {
+        margin-bottom: 10px; /* Added margin between rows */
+      }
+
+      form .category, .category1 {
+        display: flex;
+        gap: 20px;
+       justify-content: left;
+      }
+
+      .dot {
+        height: 30px;
+        width: 20px;
+        border-radius: 5%;
+        background-color: #ccc;
+        margin-right: 5px;
+      }
+
+      form .button input{
+      height: 40px;
+      width: 100%;
+      border-radius: 5px;
+      border: none;
+      color: #fff;
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+  
+      form .button input:hover{
+        /* transform: scale(0.99); */
+        background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+        }
+    </style>
+  </head>
+  <body>
+    <button class="back-button" onclick="goBack()">Back</button>
+    <div class="container">
+      <div class="title">Applicant Registration Form</div>
+      <form action="connect.php" method="post">
+        <div class="form-row">
+          <div class="input-box">
+            <span class="details">First Name</span>
+            <input type="text" placeholder="Enter your First name" required name="firstname">
+          </div>
+          <div class="input-box">
+            <span class="details">Last Name</span>
+            <input type="text" placeholder="Enter your Last Name" required name="lastname">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-box">
+            <span class="details">File Number</span>
+            <input type="text" placeholder="Enter File Number" name="filenumber">
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Enter email address" required name="email">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" placeholder="Enter phone number" required name="phonenumber">
+          </div>
+          <div class="input-box">
+            <span class="details">Address</span>
+            <input type="text" placeholder="e.g., 23, 8th St, Mayfair, Johannesburg, South Africa, 2092" required name="address">
+          </div>
+        </div>
+        
+        <div class="gender-details">
+          <span class="details">Gender</span> </br> </br>
+          <div class="category">
+            <label>
+              <input type="radio" name="gender" value="m" id="dot-11">
+              <span class="dot"></span>
+              <span class="gender">Male</span>
+            </label>
+            <label>
+              <input type="radio" name="gender" value="f" id="dot-12">
+              <span class="dot"></span>
+              <span class="gender">Female</span>
+            </label>
+            <label>
+              <input type="radio" name="gender" value="o" id="dot-13">
+              <span class="dot"></span>
+              <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="file-type">
+          <span class="details">File Type</span> </br> </br>
+          <div class="category1">
+            <label>
+              <input type="radio" name="ftype" value="nc" id="dot-1">
+              <span class="dot"></span>
+              <span class="ftype">NEW COMER</span>
+            </label>
+            <label>
+              <input type="radio" name="ftype" value="as" id="dot-2">
+              <span class="dot"></span>
+              <span class="ftype">ASYLUM SEEKER</span>
+            </label>
+            </label>
+            <label>
+              <input type="radio" name="ftype" value="rs" id="dot-3">
+              <span class="dot"></span>
+              <span class="ftype">REFUGEE STATUS</span>
+            </label> 
+            <label>
+              <input type="radio" name="ftype" value="sr" id="dot-4">
+              <span class="dot"></span>
+              <span class="ftype">SCRAA</span>
+            </label>
+            <label>
+              <input type="radio" name="ftype" value="pr" id="dot-5">
+              <span class="dot"></span>
+              <span class="ftype">PR</span>
+            </label>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>

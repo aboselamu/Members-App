@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        }
+
+        #registration-container {
+            max-width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #login-link {
+            margin-top: 10px;
+            color: #008CBA;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #login-link:hover {
+            color: #00678f;
+        }
+    </style>
+</head>
+<body>
+    <div id="registration-container">
+        <h2>Add Employee</h2>
+        <form action="server-side-register-script.php" method="post">
+            <label for="register-username">Username:</label>
+            <input type="text" id="register-username" name="username" required>
+
+            <label for="register-password">Password:</label>
+            <input type="password" id="register-password" name="password" required>
+
+            <button type="submit">Add Employee</button>
+        </form>
+        
+        <a href="login.php" id="login-link">Already have an account? Login here.</a>
+    </div>
+</body>
+</html>
